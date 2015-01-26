@@ -361,9 +361,52 @@ public class Ventana extends javax.swing.JFrame {
     }
     
     private void btnRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestarActionPerformed
-        obtener = txtPanel.getText()+" -";
+        String contenidoPanel2, numero1="";
+        contenidoPanel2=txtPanel2.getText();
+            
+        
+        if(!contenidoPanel2.equals("")){
+            
+            
+                for(int i=0; i<contenidoPanel2.length(); i++){
+                   
+                    char c = contenidoPanel2.charAt(i);
+
+                    //agrupamos yguardamos  numeros y especio los numeros
+                    if(c == '0' || c == '1'|| c == '2'|| c == '3'|| c == '4'|| c == '5'|| c == '6'|| c == '7'|| c == '8'|| c == '9' || c == '.' || c == ' '){
+                        numero1 =numero1+c; 
+                    }
+                    
+                    //Cambiar operando
+                    if(c == '+'){
+                        numero1 = numero1+"-";
+                    }
+                    
+                    if(c == '-'){
+                        numero1 = numero1+"-";
+                    }
+                    
+                    if(c == '*'){
+                        numero1 = numero1+"-";
+                    }
+                    
+                    if(c == '/'){
+                        numero1 = numero1+"-";
+                    }
+                
+                
+            }
+               obtener = numero1;
+                txtPanel2.setText(obtener); 
+        }else{
+            //Si no existe nada en el panel2 Procedemos a enviar lo del panel principal
+        obtener = txtPanel.getText()+" *";
         txtPanel2.setText(obtener);
-        txtPanel.setText("");
+        
+        }
+          
+        //colocar el Panel Principal en vacio!
+        txtPanel.setText("");                     
     }//GEN-LAST:event_btnRestarActionPerformed
 
     private void btnCeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCeroActionPerformed
@@ -521,47 +564,148 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNueveActionPerformed
 
     private void btnDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDividirActionPerformed
-        obtener = txtPanel.getText()+" /";
-        txtPanel2.setText(obtener);
-        txtPanel.setText("");
-    }//GEN-LAST:event_btnDividirActionPerformed
-
-    private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
        String contenidoPanel2, numero1="";
         contenidoPanel2=txtPanel2.getText();
-            if(contenidoPanel2 != ""){
-                System.out.print("ENTRO!");
+            
+        
+        if(!contenidoPanel2.equals("")){
             
                 for(int i=0; i<contenidoPanel2.length(); i++){
                    
                     char c = contenidoPanel2.charAt(i);
 
-                    //agrupamos los numeros
+                    //agrupamos yguardamos  numeros y especio los numeros
                     if(c == '0' || c == '1'|| c == '2'|| c == '3'|| c == '4'|| c == '5'|| c == '6'|| c == '7'|| c == '8'|| c == '9' || c == '.' || c == ' '){
                         numero1 =numero1+c; 
                     }
                     
+                    //Cambiar operando
                     if(c == '+'){
-                        numero1 = numero1+" *";
+                        numero1 = numero1+"/";
+                    }
+                    
+                    if(c == '-'){
+                        numero1 = numero1+"/";
+                    }
+                    
+                    if(c == '*'){
+                        numero1 = numero1+"/";
+                    }
+                    
+                    if(c == '/'){
+                        numero1 = numero1+"/";
                     }
                 
                 
             }
                obtener = numero1;
-        txtPanel2.setText(obtener); 
-            }else{
-        
-        
+                txtPanel2.setText(obtener); 
+        }else{
+            //Si no existe nada en el panel2 Procedemos a enviar lo del panel principal
         obtener = txtPanel.getText()+" *";
         txtPanel2.setText(obtener);
-            }
+        
+        }
+          
+        //colocar el Panel Principal en vacio!
+        txtPanel.setText("");
+    }//GEN-LAST:event_btnDividirActionPerformed
+
+    private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
+       
+        String contenidoPanel2, numero1="";
+        contenidoPanel2=txtPanel2.getText();
             
+        
+        if(!contenidoPanel2.equals("")){
+            
+                for(int i=0; i<contenidoPanel2.length(); i++){
+                   
+                    char c = contenidoPanel2.charAt(i);
+
+                    //agrupamos yguardamos  numeros y especio los numeros
+                    if(c == '0' || c == '1'|| c == '2'|| c == '3'|| c == '4'|| c == '5'|| c == '6'|| c == '7'|| c == '8'|| c == '9' || c == '.' || c == ' '){
+                        numero1 =numero1+c; 
+                    }
+                    
+                    //Cambiar operando
+                    if(c == '+'){
+                        numero1 = numero1+"*";
+                    }
+                    
+                    if(c == '-'){
+                        numero1 = numero1+"*";
+                    }
+                    
+                    if(c == '*'){
+                        numero1 = numero1+"*";
+                    }
+                    
+                    if(c == '/'){
+                        numero1 = numero1+"*";
+                    }
+                
+                
+            }
+               obtener = numero1;
+                txtPanel2.setText(obtener); 
+        }else{
+            //Si no existe nada en el panel2 Procedemos a enviar lo del panel principal
+        obtener = txtPanel.getText()+" *";
+        txtPanel2.setText(obtener);
+        
+        }
+          
+        //colocar el Panel Principal en vacio!
         txtPanel.setText("");
     }//GEN-LAST:event_btnMultiplicarActionPerformed
 
     private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
-        obtener = txtPanel.getText()+" +";
+        String contenidoPanel2, numero1="";
+        contenidoPanel2=txtPanel2.getText();
+            
+        
+        if(!contenidoPanel2.equals("")){
+            //System.out.print("ENTRO!");
+            
+                for(int i=0; i<contenidoPanel2.length(); i++){
+                   
+                    char c = contenidoPanel2.charAt(i);
+
+                    //agrupamos yguardamos  numeros y especio los numeros
+                    if(c == '0' || c == '1'|| c == '2'|| c == '3'|| c == '4'|| c == '5'|| c == '6'|| c == '7'|| c == '8'|| c == '9' || c == '.' || c == ' '){
+                        numero1 =numero1+c; 
+                    }
+                    
+                    //Cambiar operando
+                    if(c == '+'){
+                        numero1 = numero1+"+";
+                    }
+                    
+                    if(c == '-'){
+                        numero1 = numero1+"+";
+                    }
+                    
+                    if(c == '*'){
+                        numero1 = numero1+"+";
+                    }
+                    
+                    if(c == '/'){
+                        numero1 = numero1+"+";
+                    }
+                
+                
+            }
+               obtener = numero1;
+                txtPanel2.setText(obtener); 
+        }else{
+            //Si no existe nada en el panel2 Procedemos a enviar lo del panel principal
+        obtener = txtPanel.getText()+" *";
         txtPanel2.setText(obtener);
+        
+        }
+          
+        //colocar el Panel Principal en vacio!
         txtPanel.setText("");
     }//GEN-LAST:event_btnSumarActionPerformed
 
