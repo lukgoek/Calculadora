@@ -527,8 +527,35 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDividirActionPerformed
 
     private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
+       String contenidoPanel2, numero1="";
+        contenidoPanel2=txtPanel2.getText();
+            if(contenidoPanel2 != ""){
+                System.out.print("ENTRO!");
+            
+                for(int i=0; i<contenidoPanel2.length(); i++){
+                   
+                    char c = contenidoPanel2.charAt(i);
+
+                    //agrupamos los numeros
+                    if(c == '0' || c == '1'|| c == '2'|| c == '3'|| c == '4'|| c == '5'|| c == '6'|| c == '7'|| c == '8'|| c == '9' || c == '.' || c == ' '){
+                        numero1 =numero1+c; 
+                    }
+                    
+                    if(c == '+'){
+                        numero1 = numero1+" *";
+                    }
+                
+                
+            }
+               obtener = numero1;
+        txtPanel2.setText(obtener); 
+            }else{
+        
+        
         obtener = txtPanel.getText()+" *";
         txtPanel2.setText(obtener);
+            }
+            
         txtPanel.setText("");
     }//GEN-LAST:event_btnMultiplicarActionPerformed
 
